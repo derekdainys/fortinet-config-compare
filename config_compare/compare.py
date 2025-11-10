@@ -38,7 +38,6 @@ def config_compare(current, candidate, config_type="file", indent=4):
     compare_json = json_compare(current=current_json, candidate=candidate_json)
     clean_json = json_cleanup(json=compare_json, current=current_json)
     diff = json_to_text(json=clean_json)
-    print(diff)
 
     changed_indent = change_indent(config=diff, indentation_size=indent)
     return changed_indent
